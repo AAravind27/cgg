@@ -129,6 +129,9 @@ public class BaseScope extends ImporterTopLevel {
         logger.info( "Compiled context reader for " + file );
         s = cx.compileReader( contextLibraryScript, file, 1, null );
         userScripts.put( contextResourceURI, s );
+      }
+      catch ( Exception e) {
+        e.printStackTrace();
       } finally {
         contextLibraryScript.close();
       }
